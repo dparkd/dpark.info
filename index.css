@@ -64,20 +64,26 @@ video {
 	max-width: 375px;
 }
 
-/* width */
-.video-carousel::-webkit-scrollbar {
-  display: none;
+@media only screen and (min-width: 600px) {
+	/* width */
+	.video-carousel::-webkit-scrollbar {
+	  display: none;
+	}
 }
 
-/* Handle */
-.video-carousel::-webkit-scrollbar-thumb {
-  background: #191919;
-}
-
-/* Handle on hover */
-.video-carousel::-webkit-scrollbar-thumb:hover {
-  background: blue;
-  cursor: pointer;
+@media only screen and (max-width: 600px) {
+	/* width */
+	.video-carousel::-webkit-scrollbar {
+  	height: 5px;
+	}
+	 
+	.video-carousel::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+	 
+	.video-carousel::-webkit-scrollbar-thumb {
+	  background-color: #191919;
+	}
 }
 
 

@@ -83,3 +83,35 @@ sliderUniverse.addEventListener('mousemove', (e) => {
 sliderUniverse.addEventListener('mousedown', startDraggingUniverse, false);
 sliderUniverse.addEventListener('mouseup', stopDraggingUniverse, false);
 sliderUniverse.addEventListener('mouseleave', stopDraggingUniverse, false);
+
+
+
+
+// Other
+const sliderOther = document.querySelector('#other-slider');
+let mouseDownOther = false;
+let startXOther, scrollLeftOther;
+
+let startDraggingOther = function (e) {
+  mouseDownOther = true;
+  startXOther = e.pageX - sliderOther.offsetLeft;
+  scrollLeftOther = sliderOther.scrollLeft;
+};
+
+let stopDraggingOther = function (event) {
+  mouseDownOther = false;
+};
+
+sliderOther.addEventListener('mousemove', (e) => {
+  e.preventDefault();
+  if(!mouseDownOther) { return; }
+  const x = e.pageX - sliderOther.offsetLeft;
+  const scroll = x - startXOther;
+  sliderOther.scrollLeft = scrollLeftOther - scroll;
+});
+
+// Add the event listeners
+sliderOther.addEventListener('mousedown', startDraggingOther, false);
+sliderOther.addEventListener('mouseup', stopDraggingOther, false);
+sliderOther.addEventListener('mouseleave', stopDraggingOther, false);
+
