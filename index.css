@@ -1,0 +1,119 @@
+@font-face { font-family: italic; src: url('italic.otf'); } 
+@font-face { font-family: light; src: url('light.otf'); }
+
+body {
+	font-family: light;
+	padding-top: 24px;
+}
+
+
+.text-row {
+	max-width: 400px;
+	text-align: justify;
+	padding: 20px;
+}
+
+.title {
+	color: #B1B1B1;
+	font-size: 14px;
+}
+
+.body {
+	color: #191919;
+	font-size: 14px;
+	line-height: 25px;
+	letter-spacing: -0.03px;
+}
+
+.italic {
+	font-family: italic;
+}
+
+a {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+.video-carousel {
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: visible;
+  overflow-y: hidden;
+  display: inline-block;
+}
+
+.video-carousel:hover {
+	cursor: grab;
+}
+
+.video-carousel:active {
+	cursor: grabbing;
+}
+
+.video {
+	max-width: 375px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow-y: hidden;
+}
+
+video {
+	max-width: 375px;
+}
+
+/* width */
+.video-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Handle */
+.video-carousel::-webkit-scrollbar-thumb {
+  background: #191919;
+}
+
+/* Handle on hover */
+.video-carousel::-webkit-scrollbar-thumb:hover {
+  background: blue;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
