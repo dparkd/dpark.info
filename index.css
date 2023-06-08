@@ -37,6 +37,16 @@ a:visited {
 	color: black;
 }
 
+.body a:hover {
+	font-style: italic;
+}
+
+.collaborators {
+	font-style: normal;
+	color: #b1b1b1;
+}
+
+
 .video-carousel {
 	width: 100%;
 	white-space: nowrap;
