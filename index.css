@@ -4,6 +4,10 @@ body {
 	margin-bottom: 75px;
 }
 
+::selection {
+  background: #FFED47;
+}
+
 .container {
 }
 
