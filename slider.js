@@ -26,32 +26,32 @@
 // nameslide.addEventListener('mouseleave', stopDragging, false);
 
 // Canvas
-const canvasSlider = document.querySelector('#canvas-slider');
-let canvasMouseDown = false;
-let canvasX, scrollLeftUntitled;
+const ventSlider = document.querySelector('#vent-slider');
+let ventMouseDown = false;
+let ventX, scrollLeftUntitled;
 
 let startDraggingUntitled = function (e) {
-  canvasMouseDown = true;
-  canvasX = e.pageX - canvasSlider.offsetLeft;
-  scrollLeftUntitled = canvasSlider.scrollLeft;
+  ventMouseDown = true;
+  ventX = e.pageX - ventSlider.offsetLeft;
+  scrollLeftUntitled = ventSlider.scrollLeft;
 };
 
 let stopDraggingUntitled = function (event) {
-  canvasMouseDown = false;
+  ventMouseDown = false;
 };
 
-canvasSlider.addEventListener('mousemove', (e) => {
+ventSlider.addEventListener('mousemove', (e) => {
   e.preventDefault();
-  if(!canvasMouseDown) { return; }
-  const x = e.pageX - canvasSlider.offsetLeft;
-  const scroll = x - canvasX;
-  canvasSlider.scrollLeft = scrollLeftUntitled - scroll;
+  if(!ventMouseDown) { return; }
+  const x = e.pageX - ventSlider.offsetLeft;
+  const scroll = x - ventX;
+  ventSlider.scrollLeft = scrollLeftUntitled - scroll;
 });
 
 // Add the event listeners
-canvasSlider.addEventListener('mousedown', startDraggingUntitled, false);
-canvasSlider.addEventListener('mouseup', stopDraggingUntitled, false);
-canvasSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
+ventSlider.addEventListener('mousedown', startDraggingUntitled, false);
+ventSlider.addEventListener('mouseup', stopDraggingUntitled, false);
+ventSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
 
 
 

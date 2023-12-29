@@ -5,7 +5,7 @@ body {
 }
 
 ::selection {
-  background: #FFED47;
+  background: #F5DA4B;
 }
 
 .container {
@@ -14,8 +14,8 @@ body {
 .text-row {
 	max-width: 700px;
 	text-align: justify;
-	padding: 0px 30px;
 	padding-top: 50px;
+	margin: 0 auto;
 }
 
 .title {
@@ -58,6 +58,7 @@ a:visited {
 	overflow-x: visible;
   overflow-y: hidden;
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .video-carousel:hover {
