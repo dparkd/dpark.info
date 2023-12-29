@@ -1,28 +1,28 @@
-@font-face { font-family: italic; src: url('italic.otf'); } 
-@font-face { font-family: light; src: url('light.otf'); }
-
 body {
-	font-family: light;
-	padding-top: 24px;
+	font-family: "Inter", sans-serif;
+	text-rendering: geometricPrecision;
 }
 
+.container {
+	padding: 30px;
+}
 
 .text-row {
-	max-width: 400px;
+	max-width: 700px;
 	text-align: justify;
-	padding: 20px;
+	padding-top: 50px;
 }
 
 .title {
-	color: #B1B1B1;
+	color: #a1a1a1;
 	font-size: 14px;
 }
 
 .body {
 	color: #191919;
-	font-size: 14px;
-	line-height: 25px;
-	letter-spacing: -0.03px;
+	font-size: 1rem;
+	line-height: 2rem;
+	letter-spacing: -0.04rem;
 }
 
 .italic {
@@ -70,9 +70,14 @@ a:visited {
 	overflow-y: hidden;
 }
 
-	video {
-		max-width: 375px;
-	}
+video {
+	max-width: 375px;
+}
+
+img {
+	height: 500px;
+	pointer-events: none;
+}
 
 @media screen and (min-width: 600px) {
 	/* width */

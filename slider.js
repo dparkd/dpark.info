@@ -1,117 +1,114 @@
-// const slider = document.querySelector('#untitled-slider');
+// const nameslide = document.querySelector('#untitled-slider');
 // let mouseDown = false;
 // let startX, scrollLeft;
 
 // let startDragging = function (e) {
 //   mouseDown = true;
-//   startX = e.pageX - slider.offsetLeft;
-//   scrollLeft = slider.scrollLeft;
+//   startX = e.pageX - nameslide.offsetLeft;
+//   scrollLeft = nameslide.scrollLeft;
 // };
 
 // let stopDragging = function (event) {
 //   mouseDown = false;
 // };
 
-// slider.addEventListener('mousemove', (e) => {
+// nameslide.addEventListener('mousemove', (e) => {
 //   e.preventDefault();
 //   if(!mouseDown) { return; }
-//   const x = e.pageX - slider.offsetLeft;
+//   const x = e.pageX - nameslide.offsetLeft;
 //   const scroll = x - startX;
-//   slider.scrollLeft = scrollLeft - scroll;
+//   nameslide.scrollLeft = scrollLeft - scroll;
 // });
 
 // // Add the event listeners
-// slider.addEventListener('mousedown', startDragging, false);
-// slider.addEventListener('mouseup', stopDragging, false);
-// slider.addEventListener('mouseleave', stopDragging, false);
+// nameslide.addEventListener('mousedown', startDragging, false);
+// nameslide.addEventListener('mouseup', stopDragging, false);
+// nameslide.addEventListener('mouseleave', stopDragging, false);
 
-// Untitled
-const sliderUntitled = document.querySelector('#untitled-slider');
-let mouseDownUntitled = false;
-let startXUntitled, scrollLeftUntitled;
+// Canvas
+const canvasSlider = document.querySelector('#canvas-slider');
+let canvasMouseDown = false;
+let canvasX, scrollLeftUntitled;
 
 let startDraggingUntitled = function (e) {
-  mouseDownUntitled = true;
-  startXUntitled = e.pageX - sliderUntitled.offsetLeft;
-  scrollLeftUntitled = sliderUntitled.scrollLeft;
+  canvasMouseDown = true;
+  canvasX = e.pageX - canvasSlider.offsetLeft;
+  scrollLeftUntitled = canvasSlider.scrollLeft;
 };
 
 let stopDraggingUntitled = function (event) {
-  mouseDownUntitled = false;
+  canvasMouseDown = false;
 };
 
-sliderUntitled.addEventListener('mousemove', (e) => {
+canvasSlider.addEventListener('mousemove', (e) => {
   e.preventDefault();
-  if(!mouseDownUntitled) { return; }
-  const x = e.pageX - sliderUntitled.offsetLeft;
-  const scroll = x - startXUntitled;
-  sliderUntitled.scrollLeft = scrollLeftUntitled - scroll;
+  if(!canvasMouseDown) { return; }
+  const x = e.pageX - canvasSlider.offsetLeft;
+  const scroll = x - canvasX;
+  canvasSlider.scrollLeft = scrollLeftUntitled - scroll;
 });
 
 // Add the event listeners
-sliderUntitled.addEventListener('mousedown', startDraggingUntitled, false);
-sliderUntitled.addEventListener('mouseup', stopDraggingUntitled, false);
-sliderUntitled.addEventListener('mouseleave', stopDraggingUntitled, false);
+canvasSlider.addEventListener('mousedown', startDraggingUntitled, false);
+canvasSlider.addEventListener('mouseup', stopDraggingUntitled, false);
+canvasSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
 
 
 
 
-//Universe
-const sliderUniverse = document.querySelector('#universe-slider');
-let mouseDownUniverse = false;
-let startXUniverse, scrollLeftUniverse;
+//Sheet Metal
+const metalSlider = document.querySelector('#metal-slider');
+let metalMouseDown = false;
+let metalX, scrollLeftUniverse;
 
 let startDraggingUniverse = function (e) {
-  mouseDownUniverse = true;
-  startXUniverse = e.pageX - sliderUniverse.offsetLeft;
-  scrollLeftUniverse = sliderUniverse.scrollLeft;
+  metalMouseDown = true;
+  metalX = e.pageX - metalSlider.offsetLeft;
+  scrollLeftUniverse = metalSlider.scrollLeft;
 };
 
 let stopDraggingUniverse = function (event) {
-  mouseDownUniverse = false;
+  metalMouseDown = false;
 };
 
-sliderUniverse.addEventListener('mousemove', (e) => {
+metalSlider.addEventListener('mousemove', (e) => {
   e.preventDefault();
-  if(!mouseDownUniverse) { return; }
-  const x = e.pageX - sliderUniverse.offsetLeft;
-  const scroll = x - startXUniverse;
-  sliderUniverse.scrollLeft = scrollLeftUniverse - scroll;
+  if(!metalMouseDown) { return; }
+  const x = e.pageX - metalSlider.offsetLeft;
+  const scroll = x - metalX;
+  metalSlider.scrollLeft = scrollLeftUniverse - scroll;
 });
 
 // Add the event listeners
-sliderUniverse.addEventListener('mousedown', startDraggingUniverse, false);
-sliderUniverse.addEventListener('mouseup', stopDraggingUniverse, false);
-sliderUniverse.addEventListener('mouseleave', stopDraggingUniverse, false);
+metalSlider.addEventListener('mousedown', startDraggingUniverse, false);
+metalSlider.addEventListener('mouseup', stopDraggingUniverse, false);
+metalSlider.addEventListener('mouseleave', stopDraggingUniverse, false);
 
 
 
+const stepSlider = document.querySelector('#step-slider');
+let stepMouseDown = false;
+let stepX, scrollLeft;
 
-// Other
-const sliderOther = document.querySelector('#other-slider');
-let mouseDownOther = false;
-let startXOther, scrollLeftOther;
-
-let startDraggingOther = function (e) {
-  mouseDownOther = true;
-  startXOther = e.pageX - sliderOther.offsetLeft;
-  scrollLeftOther = sliderOther.scrollLeft;
+let startDragging = function (e) {
+  stepMouseDown = true;
+  stepX = e.pageX - stepSlider.offsetLeft;
+  scrollLeft = stepSlider.scrollLeft;
 };
 
-let stopDraggingOther = function (event) {
-  mouseDownOther = false;
+let stopDragging = function (event) {
+  stepMouseDown = false;
 };
 
-sliderOther.addEventListener('mousemove', (e) => {
+stepSlider.addEventListener('mousemove', (e) => {
   e.preventDefault();
-  if(!mouseDownOther) { return; }
-  const x = e.pageX - sliderOther.offsetLeft;
-  const scroll = x - startXOther;
-  sliderOther.scrollLeft = scrollLeftOther - scroll;
+  if(!stepMouseDown) { return; }
+  const x = e.pageX - stepSlider.offsetLeft;
+  const scroll = x - stepX;
+  stepSlider.scrollLeft = scrollLeft - scroll;
 });
 
 // Add the event listeners
-sliderOther.addEventListener('mousedown', startDraggingOther, false);
-sliderOther.addEventListener('mouseup', stopDraggingOther, false);
-sliderOther.addEventListener('mouseleave', stopDraggingOther, false);
-
+stepSlider.addEventListener('mousedown', startDragging, false);
+stepSlider.addEventListener('mouseup', stopDragging, false);
+stepSlider.addEventListener('mouseleave', stopDragging, false);
