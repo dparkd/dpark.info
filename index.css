@@ -1,15 +1,16 @@
 body {
 	font-family: "Inter", sans-serif;
 	text-rendering: geometricPrecision;
+	margin-bottom: 75px;
 }
 
 .container {
-	padding: 30px;
 }
 
 .text-row {
 	max-width: 700px;
 	text-align: justify;
+	padding: 0px 30px;
 	padding-top: 50px;
 }
 
@@ -63,28 +64,12 @@ a:visited {
 	cursor: grabbing;
 }
 
-.video {
-	max-width: 375px;
-	display: inline-block;
-	white-space: nowrap;
-	overflow-y: hidden;
-}
-
-video {
-	max-width: 375px;
-}
 
 img {
 	height: 500px;
 	pointer-events: none;
 }
 
-@media screen and (min-width: 600px) {
-	/* width */
-	/*.video-carousel::-webkit-scrollbar {
-	  display: none;
-	}*/
-}
 
 /* width */
 .video-carousel::-webkit-scrollbar {
@@ -102,7 +87,17 @@ img {
 
 
 
-
+@media screen and (max-width: 480px) {
+	.video-carousel {
+		display: block;
+		white-space: inherit;
+	}
+	.video-carousel img {
+		width: 100%;
+		height: auto;
+		padding:0px 5px;
+	}
+}
 
 
 
