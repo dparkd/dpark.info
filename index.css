@@ -96,11 +96,16 @@ img {
 	.video-carousel {
 		display: block;
 		white-space: inherit;
+		text-align: center;
 	}
 	.video-carousel img {
 		width: 100%;
 		height: auto;
-		padding:0px 5px;
+		margin: 0 auto;
+	}
+
+	body {
+		padding: 20px;
 	}
 }
 
