@@ -25,7 +25,35 @@
 // nameslide.addEventListener('mouseup', stopDragging, false);
 // nameslide.addEventListener('mouseleave', stopDragging, false);
 
-// Canvas
+// pvc
+const pvcSlider = document.querySelector('#pvc-slider');
+let pvcMouseDown = false;
+let pvcX, scrollLeftUntitled;
+
+let startDraggingUntitled = function (e) {
+  pvcMouseDown = true;
+  pvcX = e.pageX - pvcSlider.offsetLeft;
+  scrollLeftUntitled = pvcSlider.scrollLeft;
+};
+
+let stopDraggingUntitled = function (event) {
+  pvcMouseDown = false;
+};
+
+pvcSlider.addEventListener('mousemove', (e) => {
+  e.preventDefault();
+  if(!pvcMouseDown) { return; }
+  const x = e.pageX - pvcSlider.offsetLeft;
+  const scroll = x - pvcX;
+  pvcSlider.scrollLeft = scrollLeftUntitled - scroll;
+});
+
+// Add the event listeners
+pvcSlider.addEventListener('mousedown', startDraggingUntitled, false);
+pvcSlider.addEventListener('mouseup', stopDraggingUntitled, false);
+pvcSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
+
+// vent
 const ventSlider = document.querySelector('#vent-slider');
 let ventMouseDown = false;
 let ventX, scrollLeftUntitled;
