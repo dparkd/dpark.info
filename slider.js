@@ -25,18 +25,46 @@
 // nameslide.addEventListener('mouseup', stopDragging, false);
 // nameslide.addEventListener('mouseleave', stopDragging, false);
 
+// wall
+const wallSlider = document.querySelector('#wall-slider');
+let wallMouseDown = false;
+let wallX, scrollLeftWall;
+
+let startDraggingWall = function (e) {
+  wallMouseDown = true;
+  wallX = e.pageX - wallSlider.offsetLeft;
+  scrollLeftWall = wallSlider.scrollLeft;
+};
+
+let stopDraggingWall = function (event) {
+  wallMouseDown = false;
+};
+
+wallSlider.addEventListener('mousemove', (e) => {
+  e.preventDefault();
+  if(!wallMouseDown) { return; }
+  const x = e.pageX - wallSlider.offsetLeft;
+  const scroll = x - wallX;
+  wallSlider.scrollLeft = scrollLeftWall - scroll;
+});
+
+// Add the event listeners
+wallSlider.addEventListener('mousedown', startDraggingWall, false);
+wallSlider.addEventListener('mouseup', stopDraggingWall, false);
+wallSlider.addEventListener('mouseleave', stopDraggingWall, false);
+
 // pvc
 const pvcSlider = document.querySelector('#pvc-slider');
 let pvcMouseDown = false;
-let pvcX, scrollLeftUntitled;
+let pvcX, scrollLeftPVC;
 
-let startDraggingUntitled = function (e) {
+let startDraggingPVC = function (e) {
   pvcMouseDown = true;
   pvcX = e.pageX - pvcSlider.offsetLeft;
-  scrollLeftUntitled = pvcSlider.scrollLeft;
+  scrollLeftPVC = pvcSlider.scrollLeft;
 };
 
-let stopDraggingUntitled = function (event) {
+let stopDraggingPVC = function (event) {
   pvcMouseDown = false;
 };
 
@@ -45,26 +73,26 @@ pvcSlider.addEventListener('mousemove', (e) => {
   if(!pvcMouseDown) { return; }
   const x = e.pageX - pvcSlider.offsetLeft;
   const scroll = x - pvcX;
-  pvcSlider.scrollLeft = scrollLeftUntitled - scroll;
+  pvcSlider.scrollLeft = scrollLeftPVC - scroll;
 });
 
 // Add the event listeners
-pvcSlider.addEventListener('mousedown', startDraggingUntitled, false);
-pvcSlider.addEventListener('mouseup', stopDraggingUntitled, false);
-pvcSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
+pvcSlider.addEventListener('mousedown', startDraggingPVC, false);
+pvcSlider.addEventListener('mouseup', stopDraggingPVC, false);
+pvcSlider.addEventListener('mouseleave', stopDraggingPVC, false);
 
 // vent
 const ventSlider = document.querySelector('#vent-slider');
 let ventMouseDown = false;
-let ventX, scrollLeftUntitled;
+let ventX, scrollLeftVent;
 
-let startDraggingUntitled = function (e) {
+let startDragginVent = function (e) {
   ventMouseDown = true;
   ventX = e.pageX - ventSlider.offsetLeft;
-  scrollLeftUntitled = ventSlider.scrollLeft;
+  scrollLeftVent = ventSlider.scrollLeft;
 };
 
-let stopDraggingUntitled = function (event) {
+let stopDraggingVent = function (event) {
   ventMouseDown = false;
 };
 
@@ -73,13 +101,13 @@ ventSlider.addEventListener('mousemove', (e) => {
   if(!ventMouseDown) { return; }
   const x = e.pageX - ventSlider.offsetLeft;
   const scroll = x - ventX;
-  ventSlider.scrollLeft = scrollLeftUntitled - scroll;
+  ventSlider.scrollLeft = scrollLeftVent - scroll;
 });
 
 // Add the event listeners
-ventSlider.addEventListener('mousedown', startDraggingUntitled, false);
-ventSlider.addEventListener('mouseup', stopDraggingUntitled, false);
-ventSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
+ventSlider.addEventListener('mousedown', startDragginVent, false);
+ventSlider.addEventListener('mouseup', stopDraggingVent, false);
+ventSlider.addEventListener('mouseleave', stopDraggingVent, false);
 
 
 
@@ -87,12 +115,12 @@ ventSlider.addEventListener('mouseleave', stopDraggingUntitled, false);
 //Sheet Metal
 const metalSlider = document.querySelector('#metal-slider');
 let metalMouseDown = false;
-let metalX, scrollLeftUniverse;
+let metalX, scrollLeftMetal;
 
 let startDraggingUniverse = function (e) {
   metalMouseDown = true;
   metalX = e.pageX - metalSlider.offsetLeft;
-  scrollLeftUniverse = metalSlider.scrollLeft;
+  scrollLeftMetal = metalSlider.scrollLeft;
 };
 
 let stopDraggingUniverse = function (event) {
@@ -104,7 +132,7 @@ metalSlider.addEventListener('mousemove', (e) => {
   if(!metalMouseDown) { return; }
   const x = e.pageX - metalSlider.offsetLeft;
   const scroll = x - metalX;
-  metalSlider.scrollLeft = scrollLeftUniverse - scroll;
+  metalSlider.scrollLeft = scrollLeftMetal - scroll;
 });
 
 // Add the event listeners
